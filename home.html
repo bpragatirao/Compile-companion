@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/9168b027c9.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+  <link rel="stylesheet" href="home.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+  
+</head>
+<body>
+  <div class="fluid-container">
+    <div class="row no-gutters">
+      <div class="col-3 no-gutters">
+        <div class="left">
+          <div class="logos">
+            <div class="logo">COMPILE</div>
+            <div class="subtitle">(Companion)</div>
+          </div>
+          <div class="panel-group sem_list" id="semesters">
+          </div>
+        </div>
+      </div>
+      <div class="col-9 no-gutters">
+        <div class="right">
+          <div class="head_bar">
+            <span class="scheme">Scheme - </span><span class="super-bold">2018</span>
+            <img src="profile.png" class="profile" id="proPicId" data-target="#trash_modal1" data-toggle="modal1" onclick="document.getElementById('modal1').style.display='block'">                          
+          </div>
+          <div id="modal1" class="modal1">
+            <form class="modal-content1" action="/action_page.php">
+              <div id="im1" class="container1">
+                <span>
+                  <div><img src="profile.png" class="profile1" id="proPicModal1" onclick="addRow('table1')"></div>
+                </span>
+                <span>
+                  <div class="zone">
+                    <span class="pop">General</span> 
+                    <span class="material-icons edit-pr 12" data-target="#trash_modal2" data-toggle="modal2" onclick="open_it()">create</span>
+                    <span class="material-icons exit" onclick="document.getElementById('modal1').style.display='none'"></span>
+                    <div class="para">
+                      <p><span>Username: </span><span class="slant1" id="name1"> Karen</span></p>
+                      <span>Email: </span><span class="slant2" id="name2"> Karen@sairamtap.edu.in</span>
+                      <span><button class="out" onclick="logout()">Sign out</button></span>
+                    </div>                          
+                  </div>
+                </span>
+                <span class="history">History</span>
+                <div class="apk">
+                  <table class="b" id="historyTable">
+                    <thead>
+                      <th style="border-top-left-radius: 32px">Lab code</th>
+                      <th>Program name</th>
+                      <th>
+                        <svg class="table-icon" width="44" height="44" viewBox="0 0 44 44" fill="white">
+                          <path d="M9 4v1.38c-.83-.33-1.72-.5-2.61-.5c-1.79 0-3.58.68-4.95 2.05l3.33 3.33h1.11v1.11c.86.86 1.98 1.31 3.11 1.36V15H6v3c0 1.1.9 2 2 2h10c1.66 0 3-1.34 3-3V4H9zm-1.11 6.41V8.26H5.61L4.57 7.22a5.07 5.07 0 0 1 1.82-.34c1.34 0 2.59.52 3.54 1.46l1.41 1.41l-.2.2a2.7 2.7 0 0 1-1.92.8c-.47 0-.93-.12-1.33-.34zM19 17c0 .55-.45 1-1 1s-1-.45-1-1v-2h-6v-2.59c.57-.23 1.1-.57 1.56-1.03l.2-.2L15.59 14H17v-1.41l-6-5.97V6h8v11z" />
+                        </svg>
+                      </th>
+                      <th style="border-top-right-radius: 32px">Time</th>
+                    </thead>
+                    <tbody class="det-tub">
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div id="modal2" class="modal2">
+            <div class="profilediv">
+              <img src="profile.png" class="profile_upload" id='proPicModal2'>
+              <span class="material-icons-round plus" onclick="document.getElementById('proPicUpload').click()"></span>
+              <input type="file" id="proPicUpload" name="img" accept="image/*" onchange="setDummyPicAndUpload(this, getElementById('proPicModal2'));" style="display:none;">
+            </div>
+            <span class="material-icons-round exit-me" ></span>
+            <form class="modal-content2" action="/action_page.php">
+              <div id="im2" class="container2">
+                <div class="profile-edit" >Username</div>
+                <input type="text" placeholder="username" id="username" >
+                <div class="profile-edit pwd">Password</div>
+                <div class="inputWithIcon">
+                  <input type="password" placeholder="old password" id="password">
+                  <i class="fa fa-eye" id="togglePassword"></i>
+                </div>
+                <div class="inputWith2Icon">
+                  <input type="password" placeholder="new password"  id="newpassword" onkeyup="check()">
+                  <i class="fa fa-eye" id="togglenewPassword"></i>
+                  <i class="fa fa-info-circle info" ></i>
+                  <div class="hint_box">
+                    <div class="hint_header"><b>Hints</b>
+                      <br>
+                      <b>Password must contain:</b>
+                    </div>
+                    <div class="content">
+                      <ul>
+                        <li>atleast 6 characters.</li>
+                        <li>atleast one lower case character.</li>
+                        <li>atleast one upper case character.</li>
+                        <li>atleast one number.</li>
+                        <li>atleast one special character.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="inputWithIcon">
+                  <input type="password" placeholder="confirm new password" id="confirmPassword" onkeyup="check()">
+                  <i class="fa fa-circle" id="indicator"></i>
+                </div>
+                <button class="hollow" id="updateButton" onclick="document.getElementById('modal2').style.display='none'" >Update</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <hr>
+        <div class="right_contents">
+          <div class="sem_page" id="sem_page">
+            <span class="info">('Choose a</span>
+            <span class="bold">Semester</span>
+            <div class="to_continue1"> to start')</div>
+          </div>
+          <div class="lab_page" id="lab_page">
+            <span class="info">('Choose a </span>
+            <span class="bold">LAB</span>
+            <div class="to_continue2"> to continue')</div>
+          </div>
+          <div class="lab_programs" id="lab_programs">
+            <div class="row no-gutters">
+              <div class="col-9">
+                <p class="lab_name" id="lab_name"></p>
+              </div>
+              <div class="col-3">
+                <span class="material-icons edit"  id="edit" onclick="edit_mode()">create</span>
+                <span class="after_edit" id="after_edit">
+                  <span class="material-icons save" id="reload" VALUE="Refresh" onclick="save()"></span>
+                  <span class="material-icons cancel" onclick="cancel()"></span>
+                </span>
+              </div> 
+            </div>
+            <div id="list" class="program_list">
+              <div class="program_list_inside"></div>
+              <button class="add_block" id="add_block"> + add a program</button>
+            </div>
+          </div>  
+        </div>
+      </div>
+    </div>                
+  </div>
+</div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+  https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+  <!-- TM CHANGE -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
+  
+  <script>
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCGPwnXTYBAYdF021MK6i2sxpIoQwRL89I",
+      authDomain: "compile-anywhere.firebaseapp.com",
+      databaseURL: "https://compile-anywhere.firebaseio.com",
+      projectId: "compile-anywhere",
+      storageBucket: "compile-anywhere.appspot.com",
+      messagingSenderId: "789656347079",
+      appId: "1:789656347079:web:aed6a17db0a8858fb639e2",
+      measurementId: "G-WEG618PR1X"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    
+    </script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    
+    <script>
+        var $th = $('.apk').find('thead th')
+        $('.apk').on('scroll', function() {
+            $th.css('transform', 'translateY('+ this.scrollTop +'px)');
+        });
+    </script>
+    
+    <script src="home.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+  </html>

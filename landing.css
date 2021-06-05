@@ -1,0 +1,400 @@
+@font-face {
+    src: url(Poppins/Poppins-Light.ttf);
+    font-family: poppins;
+}
+@font-face {
+    src: url(Poppins/Poppins-ExtraBold.ttf);
+    font-family: poppins_bold;
+}
+
+@font-face {
+    src: url(Montserrat/Montserrat-Light.ttf);
+    font-family: Montserrat;
+}
+
+body {
+    background-image: url("bg.png");
+    background-size: cover;
+}
+
+button:focus {
+    outline: none;
+}
+
+.right {
+    font-family: poppins;
+    color: white;
+}
+
+.left, .login, .signup {
+    font-family: poppins;
+    height: 100vh;
+    width: 100%;
+}
+
+.left {
+    position: absolute;
+    left: 0%;
+    right: 50%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.quotes {
+    position: relative;
+    top: 25vh;
+    width:342px;
+    height:332px;
+    margin: auto;
+    font-size: 20px;
+    background-image: url(CurlyBraces.png);
+    color: #1DA1F2;
+    text-align: center;
+}
+
+.curly {
+    padding: 90px;
+    font-weight: 600;
+    font-family: Montserrat;
+}
+
+.login, .signup {
+    display: none;
+}
+
+.login {
+    border: 0.4vw solid rgb(255, 255, 255);
+    background-color: #0183d2;
+    height: 45vh;
+    width: 33vw;
+    margin: 0 auto;
+    margin-top: 27vh;
+    border-radius: 0.5em;
+}
+
+.content {
+    padding-right: 4.5vw;
+    text-align: right;
+}
+
+.signup_content {
+    padding-right: 5.6vw;
+    text-align: right;
+}
+
+.signup {
+    border: 0.4vw solid rgb(255, 255, 255);
+    background-color: #0183d2;
+    height: 68vh;
+    width: 33vw;
+    margin: 0 auto;
+    margin-top: 13vh;
+    border-radius: 0.5em;
+}
+
+.buttons {
+    position: absolute;
+    top: 40vh;
+    left: 15vw;
+}
+
+.login_button, .signup_button {
+    position: absolute;
+    padding-left: 1.5vw;
+    padding-top: 0.23vh;
+    border: 0.5vh solid #FFFFFF;
+    border-radius: 0.6vw;
+    background-color: #0183D2;
+    color: #FFFFFF;
+    width: 12.5vw;
+    height: 7vh;
+    font-size: 1.3vw;
+    font-weight: 1200;  
+}
+
+.signup_button:hover, .login_button:hover {
+    background-color: #0679c0;
+}
+
+.selected {
+    height: 7.2vh;
+    position: absolute;
+    border: 3px solid #FFFFFF;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #0183D2;
+    font-size: 1.5vw;
+    padding-left: 8px;
+    padding-top: 0.3vh;
+    font-weight: 600;
+    width: 15vw;
+    left: -1.25vw;
+}
+
+#signup_arrow, #login_arrow {
+    position: absolute;
+    visibility: hidden;
+    margin-left: -0.7vw;
+    margin-top: -0.8vh;
+    font-family: poppins;
+    font-weight: 300;
+    font-size: 2vw;
+}
+
+.hollow {
+    width: 8.3vw;
+    height: 6.4vh;
+    background-color: #0183D2;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
+    font-family: poppins;
+    font-weight: 600;
+    color: white;
+    font-size: 1em;
+}
+
+.hollow:hover {
+    background-color: #0679c0;
+}
+
+.login1 {
+    margin-top: 4vh;
+}
+
+.signup1 {
+    margin-top: 3vh;
+    font-size: 0.85em;
+}
+
+.logout_button {
+    left: 45vw;
+    top: 50vh;
+}
+
+.logos {
+    display: inline-block;
+    margin-top: 4vh;
+    margin-left: 3vw;
+    text-align: right;
+}
+
+.logo {
+    font-size: 3.5vw;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: poppins_bold;
+}
+
+.subtitle {
+    margin-top: -20px;
+    font-size: 1.85vw;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: poppins;
+}
+
+.profilediv {
+    margin-top: 5vh;
+    margin-left: 12vw;
+    display: inline-block;
+    position: relative;
+}
+
+.profile_upload {
+    border-radius: 100%;
+    max-width: 10vw;
+    max-height: 10.6vw;
+}
+
+.upload_plus {
+    height: 2vw;
+    width: 2vw;
+    position: absolute;
+    bottom: 0vw;
+    right: 0.1vw;
+    font-size: 2.2vw;
+    border-radius: 100%;
+    color: white;
+    opacity: 2;
+}
+
+.upload_plus:hover {
+    cursor: pointer;
+}
+
+.profile_img {
+    position: absolute;
+    border-radius: 100%;
+    border:  2px solid #0183D2;
+    top: 20vh;
+    left: 20.5vw;
+    max-height: 10vw;
+    max-width: 8vw;
+}
+
+input[type=email], input[type=password], input[type=text] {
+    width: 21vw;
+    border-color: rgb(255, 255, 255);
+    outline: none;
+    background: #0183D2;
+    border: 1px solid #FFFFFF;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: rgb(255, 255, 255);
+    font-family: poppins;
+}
+
+.inputWithIcon input[type=password], input[type=text] {
+    padding-right: 2.5vw;
+}
+
+.inputWithIcon i {
+    margin-left: -1.8vw;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.inputWith2Icon input[type=password], input[type=text] {
+    padding-right: 4vw;
+}
+
+.inputWith2Icon .fa-eye {
+    margin-left: -3.6vw;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.inputWith2Icon .fa-info-circle {
+    font-size: 1.2vw;
+    margin-left: 0.3vw;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.inputWithIcon .fa-circle {
+    cursor: default;
+    font-size: 1.2vw;
+    opacity: 0.8;
+    margin-left: -1.5vw;
+}
+
+.exclam i {
+    margin-left: -2vw;
+    font-size: large;
+}
+
+.exclam p {
+    margin-left: -4vw;
+    text-align: center;
+}
+
+#emailid {
+    margin-top: 10vh;
+}
+
+#password {
+    margin-top: 4vh;
+    margin-bottom: 0.1vh;
+}
+
+#forgotpassword {
+    color: white;
+    cursor: pointer;
+    font-size: 2.1vh;
+}
+
+#newemailid {
+    margin-top: 2vh;
+}
+
+#newpassword , #confirmPassword, #username {
+    margin-top: 4vh;
+}
+
+::-webkit-input-placeholder { 
+    color:white;
+    font-family: poppins;
+    font-weight: 300;
+    font-size: 2.3vh;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    box-shadow: whitesmoke;
+    -webkit-box-shadow: 0 0 0 30px #0183D2 inset !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: rgb(255, 255, 255) !important;
+    caret-color: white;
+}
+
+.clg_name {
+    position: absolute;
+    left: 35vw;
+    top: 94.5vh;
+    color:  #BEBEBE;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8vw;
+}
+
+.card-alertbox {
+    padding-top: 1.6vh;
+    background-color: #0183d2;
+    width: 37vw;
+    height: 7.3vh;
+    margin-top: 12vh;
+    margin-left: 6.5vw;
+    text-align: center;
+    text-emphasis-color: white;
+    margin-bottom: 20px;
+    display: none;
+    transition: all 1s;
+    border-radius: 0.5em;
+    font-size: 2.3vh;
+  }
+
+#signup_alertbox {
+    margin-top: 5.5vh;
+    margin-left: 7.45vw;
+    width: 35vw;
+}
+
+.hint_box {
+    padding-top: 1.8vw;
+    padding-left: 2vw;
+    left: 14vw;
+    top: 18vh;
+    height: auto;
+    width: 22vw;
+    color: black;
+    background-color: white;
+    position: absolute;
+    font-size: 0.9vw;
+    border-radius: 1.9vw;
+    font-weight: 600;
+    line-height: 22px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateY(-8vh);
+    text-align: left;
+}
+
+.hint_header {
+    font-size: 1.2vw;
+    font-weight: bolder;
+    margin-bottom: 3px;
+}
+
+.info:hover ~ .hint_box {
+    visibility: visible !important;
+    opacity: 1;
+    transform: translateY(0vh);
+}

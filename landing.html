@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compile Companion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/9168b027c9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="landing.css">   
+</head>
+<body>
+    <div class="fluid-container">
+        <div class="wrapper" id="login">
+            <div class="row no-gutters">
+                <div class="col no-gutters">
+                    <div class="left">
+                        <div class="logos">
+                            <div class="logo">COMPILE</div>
+                            <div class="subtitle">(Companion)</div>
+                        </div>
+                        <div class="buttons">
+                            <button type="button" onclick="login_page()" class="login_button" id="login_button">
+                                <div class="row no-gutters">
+                                    <div class="col-11">
+                                        Login
+                                    </div>
+                                    <div class="col-1">
+                                        <span id="login_arrow">></span>
+                                    </div>
+                                </div> 
+                            </button>
+                            <br><br><br><br>
+                            <button type="button" onclick="signup_page()" class="signup_button" id="signup_button">
+                                <div class="row no-gutters">
+                                    <div class="col-11">
+                                        Sign Up
+                                    </div>
+                                    <div class="col-1">
+                                        <span id="signup_arrow">></span>
+                                    </div>
+                                </div> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col no-gutters">
+                    <div class="right">
+                        <div class="landing" id="landing">
+                            <div class="quotes" id="quotes">
+                                <div class="curly" id="msgDiv"></div>
+                            </div>
+                        </div>
+                        <div class="wrapper">
+                            <div class="container login" id="login_page">
+                                <img src="Curlies.png" class="profile_img"  id='proPic'>
+                                <div class="content">
+                                    <input type="email" placeholder="email" id="emailid" onkeyup="getProPicForValidEmail(this)"> <!-- TM CHANGE -->
+                                    <div class="inputWithIcon">
+                                        <input type="password" placeholder="password" id="password">
+                                        <i  class="fa fa-eye" id="togglePassword"></i>
+                                    </div>
+                                    <a onclick="forgotpassword()" id="forgotpassword">Forgot password?</a><br>
+                                    <button class="hollow login1" onclick="login()">Login</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="signup" id="signup_page">
+                            <div class="profilediv">
+                                <img src="profile.png" class="profile_upload" id="proPicHolder">
+                                <span class="material-icons-round upload_plus" onclick="document.getElementById('proPicUpload').click()">add_circle</span>
+                                <input type="file" id="proPicUpload" name="img" accept="image/*" onchange="setDummyPic(this, getElementById('proPicHolder'));" style="display:none;"><!-- TM CHANGE -->
+                            </div>
+                            <div class="signup_content">
+                                <input type="email" placeholder="email" id="newemailid" >
+                                <input type="text" placeholder="username" id="username" >
+                                <div class="inputWith2Icon">
+                                    <input type="password" placeholder="password"  id="newpassword" onkeyup="check()">
+                                    <i class="fa fa-eye" id="togglenewPassword"></i>
+                                    <i class="fa fa-info-circle info" ></i>
+                                    <div class="hint_box">
+                                        <div class="hint_header"><b>Hints</b></div>
+                                        <div class="hintbox_content">
+                                            Password must contain:
+                                            <ul>
+                                                <li>atleast 6 characters.</li>
+                                                <li>atleast one lower case character.</li>
+                                                <li>atleast one upper case character.</li>
+                                                <li>atleast one number.</li>
+                                                <li>atleast one special character.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="inputWithIcon">
+                                    <input type="password" placeholder="confirm password" id="confirmPassword" onkeyup="check()">
+                                    <i class="fa fa-circle" id="indicator"></i>
+                                </div>
+                                <button class="hollow signup1" onclick="signup()" id="sign1">Sign Up</button>
+                                
+                            </div>
+                        </div>
+                        <div id="alertbox" class="card-alertbox">
+                            <div class="row no-gutters exclam">
+                                <div class="col-2">
+                                    <i class="fa fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="col-10">
+                                    <p id="alerting"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="signup_alertbox" class="card-alertbox">
+                            <div class="row no-gutters exclam">
+                                <div class="col-2">
+                                    <i class="fa fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="col-10">
+                                    <p id="signup_alerting"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="college">
+                            <p class="clg_name">SRI SAIRAM COLLEGE OF ENGINEERING</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+    
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+        
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-storage.js"></script>
+        
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyCGPwnXTYBAYdF021MK6i2sxpIoQwRL89I",
+                authDomain: "compile-anywhere.firebaseapp.com",
+                databaseURL: "https://compile-anywhere.firebaseio.com/",
+                projectId: "compile-anywhere",
+                storageBucket: "compile-anywhere.appspot.com",
+                messagingSenderId: "789656347079",
+                appId: "1:789656347079:web:aed6a17db0a8858fb639e2",
+                measurementId: "G-WEG618PR1X"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            
+            var firestore = firebase.firestore();
+        </script>
+        <script src="landing.js"></script>
+        
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+    </body>
+    </html>
+    

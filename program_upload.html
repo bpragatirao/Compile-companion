@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program Upload</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/9168b027c9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="program_upload.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="row no-gutters">
+        <div class="col-3">
+            <div class="left">
+                <div class="logos">
+                    <div class="logo">COMPILE</div>
+                    <div class="subtitle">(Companion)</div>
+                </div>
+                <div class="sem_list">
+                    <div class="sem" onclick="program('reset_it','delete_it')">
+                        <div class="row no-gutters">
+                            <div class="col-9">
+                                <span class="sem_font">Program #1</span>
+                            </div>
+                            <span class="col-2">
+                                <div class="duo">
+                                    <span id="reset_it" class="material-icons reset" data-target="#trash_modalreset"
+                                    data-toggle="modalreset"
+                                    onclick="document.getElementById('reset_me').style.display='block'"></span>
+                                    <div id="reset_me" class="modalreset">
+                                        <form class="modal-content_reset" action="/action_page.php">
+                                            <div class="container_reset">
+                                                <span class="pop_reset">Are you sure ?</span>
+                                                <div class="clearfix_reset">
+                                                    <button type="button"
+                                                    onclick="document.getElementById('reset_me').style.display='none'"
+                                                    class="cancelbtn">
+                                                    Cancel</button><br />
+                                                    <button type="button"
+                                                    onclick="document.getElementById('reset_me').style.display='none'"
+                                                    class="deletebtn">
+                                                    Yes, reset
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <span id="delete_it" class="material-icons delete" data-target="#trash_modaldelete"
+                                data-toggle="modaldelete"
+                                onclick="document.getElementById('delete_me').style.display='block'"></span>
+                                <div id="delete_me" class="modaldelete">
+                                    <form class="modal-content_delete" action="/action_page.php">
+                                        <div class="container_delete">
+                                            <span class="pop_delete">Are you sure ?</span>
+                                            <div class="clearfix_delete">
+                                                <button type="button"
+                                                onclick="document.getElementById('delete_me').style.display='none'"
+                                                class="cancelbtn">
+                                                Cancel</button><br />
+                                                <button type="button"
+                                                onclick="document.getElementById('delete_me').style.display='none'"
+                                                class="deletebtn">
+                                                Yes, delete
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="sem" onclick="program('reset2','delete2')">
+                <div class="row no-gutters">
+                    <div class="col-9">
+                        <span class="sem_font">Program #2</span>
+                    </div>
+                    <span class="col-2">
+                        <div class="duo">
+                            <span id="reset2" class="material-icons reset"></span>
+                            <span id="delete2" class="material-icons delete"></span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+            <div class="sem" onclick="program('reset3','delete3')">
+                <div class="row no-gutters">
+                    <div class="col-9">
+                        <span class="sem_font">Program #3</span>
+                    </div>
+                    <span class="col-2">
+                        <div class="duo">
+                            <span id="reset3" class="material-icons reset"></span>
+                            <span id="delete3" class="material-icons delete"></span>
+                        </div>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-9">
+    <div class="right">
+        <div class="head_bar">
+            <span class="lab_name">Analog and Digital Electronics Laboratory</span>
+            <img src="profile.png" class="profile" />
+        </div>
+        <hr class="first_line" />
+        <div class="sec_head_bar">
+            <div class="row no-gutters">
+                <div class="col-8">
+                    <span class="program_num">Program #1</span>
+                </div>
+                <div class="col-4">
+                    <span class="undo">Undo Changes</span>
+                    <button class="save" id="saveButton" onclick="backToList()">Save</button>
+                </div>
+            </div>
+        </div>
+        <hr class="second_line" />
+        <div class="row no-gutters">
+            <div class="col-8">
+                <div class="middle">
+                    <div class="set">
+                        <div class="row no-gutters">
+                            <div class="col-8">
+                                <div class="headings">Program Title</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="last_edited"></div>
+                            </div>
+                        </div>
+                        
+                        <input type="text" class="program_title" id="latestTitle" />
+                        
+                        
+                    </div>
+                    <div class="set">
+                        <div class="row no-gutters">
+                            <div class="col-8">
+                                <div class="headings">Program Description</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="last_edited"></div>
+                            </div>
+                        </div>
+                        <textarea class="program_description" cols="40" rows="5"></textarea>
+                    </div>
+                    <div class="set">
+                        <div class="row no-gutters">
+                            <div class="col-8">
+                                <div class="headings">Program</div>
+                            </div>
+                            <div class="col-4">
+                                <div class="last_edited"></div>
+                            </div>
+                        </div>
+                        <div class="program_code" contenteditable></div>
+                    </div>
+                    <div class="set">
+                        <div class="headings">Runtime Input (if any)</div>
+                        <textarea class="stdin" cols="50" rows="8"></textarea>
+                    </div>
+                    <div class="set">
+                        <div class="headings">Output</div>
+                        <div class="outputs">
+                            <input class="checkbox" type="checkbox" checked="checked"
+                            onclick="toggleVisibility(this, 'stdout')" />
+                            <span class="checkbox_text">Text</span>
+                            <input class="checkbox" type="checkbox" onclick="toggleVisibility(this, 'img')" />
+                            <span class="checkbox_text">Image</span>
+                        </div>
+                        <textarea class="stdout" cols="50" rows="8" id="stdout"></textarea>
+                        <div class="images" id="img" style="display: none">
+                            <span class="image_set">
+                                <img src="output.png" class="output_uploaded_img" />
+                                <span class="material-icons img_delete">delete</span>
+                            </span>
+                            <button class="add_img">
+                                <span class="material-icons-round">add_photo_alternate</span>
+                                <div class="add_img_text">add a image</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="details">
+                    <div class="matter">
+                        <span class="title">Language</span>
+                        <i class="fa fa-info-circle info" data-target="#trash_hint" data-toggle="hint"
+                        onclick="document.getElementById('hint').style.display='block'"></i>
+                        <div id="hint" class="hint">
+                            <form class="hint_content" action="/action_page.php">
+                                <div class="container_hint">
+                                    <div class="hint_header">
+                                        <b>Supported Languages</b>
+                                        <span class="close"
+                                        onclick="document.getElementById('hint').style.display='none'">X</span>
+                                        <br />
+                                        <br />
+                                    </div>
+                                    <div class="content">
+                                        <p>We support 67 programming languages</p>
+                                        <p>Java</p>
+                                        <p>Java (Advanced)</p>
+                                        <p>C</p>
+                                        <p>C++</p>
+                                        <p>C#</p>
+                                        <p>PHP</p>
+                                        <p>Perl</p>
+                                        <p>Ruby</p>
+                                        <p>Python2</p>
+                                        <p>Python3</p>
+                                        <p>SQL</p>
+                                        <p>Scala</p>
+                                        <p>VB.Net</p>
+                                        <p>Pascal</p>
+                                        <p>Haskell</p>
+                                        <p>Kotlin</p>
+                                        <p>Objective-C</p>
+                                        <p>Groovy</p>
+                                        <p>Fortran</p>
+                                        <p>Brainf**k</p>
+                                        <p>Hack</p>
+                                        <p>TCL</p>
+                                        <p>Lua</p>
+                                        <p>Rust</p>
+                                        <p>F#</p>
+                                        <p>Ada</p>
+                                        <p>D</p>
+                                        <p>Dart</p>
+                                        <p>YaBasic</p>
+                                        <p>Free Basic</p>
+                                        <p>Clojure</p>
+                                        <p>Verilog</p>
+                                        <p>NodeJS</p>
+                                        <p>Scheme</p>
+                                        <p>Forth</p>
+                                        <p>Prolog</p>
+                                        <p>Bash</p>
+                                        <p>COBOL</p>
+                                        <p>OCTAVE/ Matlab</p>
+                                        <p>Icon</p>
+                                        <p>CoffeeScript</p>
+                                        <p>Assembler (GCC)</p>
+                                        <p>R</p>
+                                        <p>Assembler (NASM)</p>
+                                        <p>Intercal</p>
+                                        <p>Nemerle</p>
+                                        <p>Ocaml</p>
+                                        <p>Unlambda</p>
+                                        <p>Picolisp</p>
+                                        <p>CLISP</p>
+                                        <p>Elixir</p>
+                                        <p>SpiderMonkey</p>
+                                        <p>Rhino JS</p>
+                                        <p>BC</p>
+                                        <p>Nim</p>
+                                        <p>Factor</p>
+                                        <p>Falcon</p>
+                                        <p>Fantom</p>
+                                        <p>Pike</p>
+                                        <p>Go</p>
+                                        <p>OZ-Mozart</p>
+                                        <p>LOLCODE</p>
+                                        <p>Racket</p>
+                                        <p>SmallTalk</p>
+                                        <p>Whitespace</p>
+                                        <p>Erlang</p>
+                                        <p>J Lang</p>
+                                        <p>HTML</p>
+                                        <p>Javascript</p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="lang">
+                            <div class="dropdown">
+                                <div class="input-icons">
+                                    <input class="drop3" type="text" placeholder="C" />
+                                    <i class="material-icons icon" onclick="myFunction()">
+                                    </i>
+                                    <div id="myDropdown" class="dropdown-content">
+                                        <input class="tab" type="text" placeholder="Search.." id="myInput"
+                                        onkeyup="filterFunction()" />
+                                        <a class="options" href="#Java">Java</a>
+                                        <a class="options" href="#C">C</a>
+                                        <a class="options" href="#C++">C++</a>
+                                        <a class="options" href="#C#">C#</a>
+                                        <a class="options" href="#PHP">PHP</a>
+                                        <a class="options" href="#Perl">Perl</a>
+                                        <a class="options" href="#Ruby">Ruby</a>
+                                        <a class="options" href="#Python2">Python2</a>
+                                        <a class="options" href="#Python3">Python3</a>
+                                        <a class="options" href="#SQL">SQL</a>
+                                        <a class="options" href="#Scala">Scala</a>
+                                        <a class="options" href="#VB.Net">VB.Net</a>
+                                        <a class="options" href="#Pascal">Pascal</a>
+                                        <a class="options" href="#Haskell">Haskell</a>
+                                        <a class="options" href="#Kotlin">Kotlin</a>
+                                        <a class="options" href="#Swift">Swift</a>
+                                        <a class="options" href="#Objective-C">Objective-C</a>
+                                        <a class="options" href="#Groovy">Groovy</a>
+                                        <a class="options" href="#Fortran">Fortran</a>
+                                        <a class="options" href="#Brainf**k">Brainf**k</a>
+                                        <a class="options" href="#Hack">Hack</a>
+                                        <a class="options" href="#TCL">TCL</a>
+                                        <a class="options" href="#Lua">Lua</a>
+                                        <a class="options" href="#Rust">Rust</a>
+                                        <a class="options" href="#F#">F#</a>
+                                        <a class="options" href="#Ada">Ada</a>
+                                        <a class="options" href="#D">D</a>
+                                        <a class="options" href="#Dart">Dart</a>
+                                        <a class="options" href="#YaBasic">YaBasic</a>
+                                        <a class="options" href="#Free Basic">Free Basic</a>
+                                        <a class="options" href="#Clojure">Clojure</a>
+                                        <a class="options" href="#Verilog">Verilog</a>
+                                        <a class="options" href="#NodeJS">NodeJS</a>
+                                        <a class="options" href="#Scheme">Scheme</a>
+                                        <a class="options" href="#Forth">Forth</a>
+                                        <a class="options" href="#Prolog">Prolog</a>
+                                        <a class="options" href="#Bash">Bash</a>
+                                        <a class="options" href="#COBOL">COBOL</a>
+                                        <a class="options" href="#OCTAVE/ Matlab">OCTAVE/ Matlab</a>
+                                        <a class="options" href="#Icon">Icon</a>
+                                        <a class="options" href="#CoffeeScript">CoffeeScript</a>
+                                        <a class="options" href="#Assembler (GCC)">Assembler (GCC)</a>
+                                        <a class="options" href="#R">R</a>
+                                        <a class="options" href="#Assembler (NASM)">Assembler (NASM)</a>
+                                        <a class="options" href="#Intercal">Intercal</a>
+                                        <a class="options" href="#Nemerle">Nemerle</a>
+                                        <a class="options" href="#Ocaml">Ocaml</a>
+                                        <a class="options" href="#Unlambda">Unlambda</a>
+                                        <a class="options" href="#Picolisp">Picolisp</a>
+                                        <a class="options" href="#CLISP">CLISP</a>
+                                        <a class="options" href="#Elixir">Elixir</a>
+                                        <a class="options" href="#SpiderMonkey">SpiderMonkey</a>
+                                        <a class="options" href="#Rhino JS">Rhino JS</a>
+                                        <a class="options" href="#BC">BC</a>
+                                        <a class="options" href="#Nim">Nim</a>
+                                        <a class="options" href="#Factor">Factor</a>
+                                        <a class="options" href="#Falcon">Falcon</a>
+                                        <a class="options" href="#Fantom">Fantom</a>
+                                        <a class="options" href="#Pike">Pike</a>
+                                        <a class="options" href="#Go">Go</a>
+                                        <a class="options" href="#OZ-Mozart">OZ-Mozart</a>
+                                        <a class="options" href="#LOLCODE">LOLCODE</a>
+                                        <a class="options" href="#Racket">Racket</a>
+                                        <a class="options" href="#SmallTalk">SmallTalk</a>
+                                        <a class="options" href="#Whitespace">Whitespace</a>
+                                        <a class="options" href="#Erlang">Erlang</a>
+                                        <a class="options" href="#J Lang">J Lang</a>
+                                        <a class="options" href="#HTML">HTML</a>
+                                        <a class="options" href="#javascript">javascript</a>
+                                    </div>
+                                </div>
+                                <div class="matter">
+                                    <span class="title2">OS used</span>
+                                </div>
+                                <input class="drop1" type="text" name="displayValue" id="thisValue1"
+                                placeholder="Linux" />
+                                <div class="matter">
+                                    <span class="title2">Software used</span>
+                                </div>
+                                <input class="drop1" type="text" name="displayValue" id="thisValue"
+                                placeholder="Gnome text editor" />
+                                <div class="matter">
+                                    <span class="title2">Youtube link</span>
+                                </div>
+                                <div class="input-icons">
+                                    <div class="svg-container">
+                                        <svg class="icon1" width="46" height="46" viewBox="0 0 46 46"
+                                        preserveAspectRatio="xMinYMin meet" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg%22%3E">
+                                        <path
+                                        d="M0 8C0 3.58172 3.58172 0 8 0H46V46H8C3.58172 46 0 42.4183 0 38V8Z"
+                                        fill="#C4C4C4" />
+                                        <path
+                                        d="M33.0617 17.9398C32.9422 17.4946 32.7078 17.0886 32.382 16.7624C32.0563 16.4363 31.6505 16.2014 31.2055 16.0813C29.5672 15.6406 23 15.6406 23 15.6406C23 15.6406 16.4328 15.6406 14.7945 16.0789C14.3493 16.1986 13.9433 16.4334 13.6175 16.7596C13.2917 17.0859 13.0574 17.4921 12.9383 17.9375C12.5 19.5781 12.5 23 12.5 23C12.5 23 12.5 26.4219 12.9383 28.0602C13.1797 28.9648 13.8922 29.6773 14.7945 29.9188C16.4328 30.3594 23 30.3594 23 30.3594C23 30.3594 29.5672 30.3594 31.2055 29.9188C32.1102 29.6773 32.8203 28.9648 33.0617 28.0602C33.5 26.4219 33.5 23 33.5 23C33.5 23 33.5 19.5781 33.0617 17.9398ZM20.9141 26.1406V19.8594L26.3516 22.9766L20.9141 26.1406Z"
+                                        fill="white" />
+                                    </svg>
+                                </div>
+                                <input class="drop2" id="site" type="text" />
+                            </div>
+                            <div class="matter">
+                                <span class="title2">Tags</span>
+                            </div>
+                            <div class="tag-container">
+                                <input type="text" name="displayValue" id="thisValue" />
+                            </div>
+                            <button class="run_it" data-target="#trash_modal" data-toggle="modal"
+                            onclick="document.getElementById('modal').style.display='block'">
+                            <span class="run">Run</span><span class="material-icons play"></span>
+                        </button>
+                        <div id="modal" class="modal">
+                            <form class="modal-content" action="/action_page.php">
+                                <div class="container">
+                                    <span class="pop">Output</span>
+                                    <span class="material-icons exit"
+                                    onclick="document.getElementById('modal').style.display='none'"></span>
+                                    <div class="output">
+                                        <span>Hello, World!</span>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+    
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCGPwnXTYBAYdF021MK6i2sxpIoQwRL89I",
+            authDomain: "compile-anywhere.firebaseapp.com",
+            databaseURL: "https://compile-anywhere.firebaseio.com",
+            projectId: "compile-anywhere",
+            storageBucket: "compile-anywhere.appspot.com",
+            messagingSenderId: "789656347079",
+            appId: "1:789656347079:web:aed6a17db0a8858fb639e2",
+            measurementId: "G-WEG618PR1X",
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        var firestore = firebase.firestore();
+        
+        const docRef = firestore.collection("faculty-user").doc();
+        const outputHeader = document.querySelector("#progOutput");
+        
+        const inputTextField = document.querySelector("#latestTitle"); // # = id
+        const inputTextField1 = document.querySelector("#thisValue1");
+        //   const inputTextField = document.querySelector(".program_title");
+        
+        const saveButton = document.querySelector("#saveButton");
+        const undoButton = document.querySelector("#undoButton");
+        
+        saveButton.addEventListener("click", function () {
+            const textToSave = inputTextField.value;
+            const textToSave1 = inputTextField1.value;
+            
+            console.log("I am going to save" + textToSave + "to firestore");
+            docRef
+            .set({
+                programTitle: textToSave,
+                Os_used: textToSave1,
+                Lab: "Analog and Digital Electronics Laboratory"
+            })
+            .then(function () {
+                console.log("status saved!");
+            })
+            .catch(function (error) {
+                console.log("got an error:", error);
+            });
+        });
+    </script>
+    <script src="program_upload.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

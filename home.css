@@ -1,0 +1,1100 @@
+@font-face {
+    src: url(Poppins/Poppins-Light.ttf);
+    font-family: poppins;
+}
+
+@font-face {
+    src: url(Poppins/Poppins-ExtraBold.ttf);
+    font-family: poppins_bold;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+button:focus {
+    outline: none;
+}
+
+.right {
+    font-family: poppins;
+    color: #0183D2;
+}
+
+.left {
+    position: absolute;
+    margin: 0% 0% 0% 0%;
+    height: 100vh;
+    width: 100%;
+    font-family: poppins;
+    color: white;
+    background: #0183D2;
+}
+
+.logo {
+    position: absolute;
+    left: 10%;
+    top: 1.5%;
+    font-size: 2.8vw;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: poppins_bold; 
+}
+
+.logos {
+    display: inline-block;
+    margin-top: 4vh;
+    margin-left: 3vw;
+    text-align: right;
+} 
+
+.subtitle {
+    position: relative;
+    left: 18%;
+    right: 5%;
+    top: 3vh;
+    font-size: 1.45vw;
+    font-weight: bold;
+    color: #ffffff;
+    font-family: poppins;
+}
+
+.sem_list {
+    height: 82vh;
+    width: 25vw;
+    margin-top: 13.6%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.sem_list{
+    height:600px;
+    width:365px;
+    margin-left: 5px;
+    overflow-x:hidden;
+}
+
+.sem {
+    padding-left: 0.8vw;
+    padding-top: 2.5vh;
+    height: 10vh;
+    width: 22vw;
+    margin-left: 5%;
+    border-radius: 3vh;
+    background-color: #0183D2;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5vw;
+    align-content: center;
+}
+
+.col-2{
+    margin-top: 0.5vh;
+}
+
+.sem:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    color: #0183D2;
+}
+
+.program_list::-webkit-scrollbar {
+    width: 0.5vw;       
+}
+
+.program_list::-webkit-scrollbar-track {
+    background: transparent;  
+}
+
+.program_list::-webkit-scrollbar-thumb {
+    background-color: #74ABCC;   
+    border-radius: 1.5vw;  
+    margin-right: 1vw;
+}
+
+
+.head_bar {
+    margin-top: 3vh;
+}
+
+.scheme {
+    size: 1vw;
+    color: #0183D2;
+    font-size: 2.3vw;
+    margin-left: 2vw;
+    align-self: center;
+}
+
+.profile {
+    margin-top: 0.5vh;
+    margin-left: 49.5vw;
+    border-radius: 100%;
+    border: solid 1px #0183D2;
+    height: 7.4vh;
+    transition: 0.5s;
+    margin-bottom: 1vh;
+}
+
+hr {
+    border: 0.1px solid#0183D2;
+}
+
+.lab_page, .sem_page {
+    margin-top: 20%;
+    margin-left: 35%;
+    font-size: 3vw;
+    line-height: 72px;
+    display: none;
+    color: #0183D2;
+}
+
+.to_continue1 {
+    margin-left: 17.5%;
+}
+
+.to_continue2 {
+    margin-left: 4%;
+}
+
+.sem_page {
+    display: block;
+    margin-left: 30%;
+}
+
+.lab_name {
+    margin-top: 4vh;
+    margin-left: 2.5vw;
+    font-weight: 500;
+    font-size: 1.5vw;
+    margin-bottom: 2vh;
+}
+
+.lab_programs {
+    display: none;
+}
+
+.program_list {
+    width: 73vw;
+    height: 68vh;
+    overflow-y: scroll;
+}
+
+.program_block {
+    padding-left: 2vw;
+    padding-top: 3vh;
+    height: 10vh;
+    width: 66.4vw;
+    vertical-align: 1.5vw;
+    margin-left: 2.5vw;
+    margin-top: 3.4vh;
+    border-radius: 3vh;
+    background-color: #0183D2;
+    color: white;
+    align-content: center;
+    font-weight: 300;
+    font-size: 1.5vw;
+}
+
+.add_block {
+    border: 3px solid #0183D2;
+    color: #0183D2;
+    filter: drop-shadow(0px 0px 36px rgba(0, 0, 0, 0.1));
+    background-color: transparent;
+    border-radius: 40px;
+    height: 8.89vh;
+    width: 18vw;
+    font-size: 1.6vw;
+    margin-top: 3.4vh;
+    margin-left: 50.9vw;
+    margin-bottom: 6vh;
+    font-weight: 400;
+}
+
+.add_block:hover {
+    background-color: rgb(230, 227, 227);
+}
+
+.super-bold{
+    font-weight: 900;
+    size: 2vw;
+    color: #0183D2;
+    font-size: 2.3vw;
+}
+
+.info{
+    size: 2vw;
+    color: #0183D2;
+    font-size: 3vw;
+}
+
+.bold{
+    size: 2vw;
+    color: #0183D2;
+    font-size: 3vw;
+    font-weight: 900;
+}
+
+.plus {
+    font-size: 2vw;
+    margin-top: 0.7vh;
+    margin-left: 12vw;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+} 
+
+.material .material-icons{display:none}
+.material.material-off .material-icons:last-of-type {display:inline}
+.material:not(.material-off) .material-icons:first-of-type{display:inline}
+
+.material-icons.md1::before{
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    content:"keyboard_arrow_right"; 
+    color: white;
+    background-color: transparent;
+    border-radius: 100%;
+    margin-left: 4vw;
+}
+
+.material-icons.arrow::before{
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 20px;
+    content:"keyboard_arrow_up"; 
+    color: white;
+    background-color:transperent;
+    border-radius: 100%;
+    margin-left: 4vw;
+}
+
+.material-icons.md2::before{
+    content: "add";
+    color: #0183D2;
+    background-color: white;
+    border-radius: 100%;
+    margin-left: 12.5vw;
+    margin-top: -2vh;
+    align-self: center; 
+}
+
+.col-8{
+    margin-left: -0.5vw;
+}
+
+.material-icons.md5::before{
+    content: "delete";
+    padding: 0.35vw;
+    font-size: 1.2vw;
+    border-radius: 100%;
+    background-color: white;
+    color: #0183D2;
+    align-self: start;   
+}
+
+.material-icons.md6::before{
+    content: "settings_backup_restore";
+    padding: 0.35vw;
+    font-size: 1.2vw;
+    border-radius: 100%;
+    background-color: white;
+    color: #0183D2;  
+}
+
+.material-icons.md7::before{
+    font-size: 20px;
+    font-weight: 100;
+    color: #0183D2;
+    background-color: white;
+    margin-left: 4vw;
+    content: "close";
+    border-radius: 100%;
+    border: 2px solid #0183D2;
+}
+
+.panel-default:hover .material-icons.md1::before {
+    content: "keyboard_arrow_down";
+    color: white;
+    background-color:transparent;
+}
+
+.panel-default:hover .material-icons.arrow::before{
+    color: white;
+    background-color: transparent;
+}
+
+.program_block{
+    align-content: center;
+}
+
+.program_block:hover .material-icons.md2::before{
+    content: "keyboard_arrow_right";
+     color:#0183D2;
+    background-color: white;
+}
+
+.material-icons.md2:hover{
+    color: black;
+}
+
+#myDIV{
+    background-color: white;
+    border: #0183D2;
+}
+
+body {font-family:Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Set a style for all buttons */
+button {
+    background-color: white;
+    color: #0183D2;
+    height: 5.5vh;
+    width: 9.4vw;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 2px 0;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Float cancel and delete buttons and add an equal width */
+.cancelbtn, .deletebtn {
+    
+    float: center;
+    
+}
+
+/* Add a color to the cancel button */
+.cancelbtn {
+    margin-top: 1.5vh;
+    background-color: white;
+    color: #0183D2;
+}
+
+.cancelbtn:hover, .cancelbtn:focus{
+    color: white;
+    background-color: #0183D2;
+}
+
+/* Add a color to the delete button */
+.deletebtn {
+    background-color: white;
+    color:#0183D2;
+}
+
+.deletebtn:hover, .deletebtn:focus{
+    background-color: #0183D2;
+    color: white;
+}
+
+/* Add padding and center-align text to the container */
+.container {
+    color: #0183D2;
+    padding: 16px;
+    text-align: center;
+}
+
+.container1 {
+    color: #0183D2;
+    padding: 16px;
+    text-align: top;
+    margin-top: 0%;
+}
+
+.container2 {
+    color: #0183D2;
+    padding: 16px;
+    text-align: center;
+}
+
+.container0 {
+    color: #0183D2;
+    padding: 16px;
+    text-align: center;
+}
+
+.para{
+    font-weight: normal;
+    font-size: 1.2vw;
+    font-family: poppins;
+    margin-top: 0.8vh;
+}
+
+.zone{
+    margin-left: 10.5vw;
+    margin-top: 1.5vh;
+}
+
+.history{
+    font-weight: 720;
+    font-size: 2vw;
+    font-family: poppins;
+    margin-top: 3vh;
+    margin-left: 0.5vw;
+    position: fixed;
+}
+
+.pop{
+    align-self: top;
+    top: 0%;
+    font-weight: 720;
+    font-size: 1.9vw;
+    font-family: poppins;
+}
+
+.pop2{
+    text-align: left;
+    font-weight: 720;
+    margin-top: 8vh;
+    margin-left: -12vw;
+    position: fixed;
+}
+
+.pop1{
+    text-align: left;
+    font-weight: 720;
+    margin-top: 1.5vh;
+}
+
+.pop0{
+    text-align: left;
+    font-weight: 720;
+    margin-top: 1.5vh;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background: rgba(0, 0, 0, 0.2);
+    padding-top: 50px;
+}
+
+.modal1 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background: rgba(0, 0, 0, 0.2);
+    padding-top: 50px;
+}
+
+.modal0 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background: rgba(0, 0, 0, 0.2);
+    padding-top: 50px;
+}
+
+.modal2 {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background: rgba(0, 0, 0, 0.2);
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: white;
+    height: 23vh;
+    align-self: center;
+    border-radius: 35px;
+    margin-left: 50vw;
+    margin-top: 30vh;
+    border: 4px solid #0183D2;
+    width: 22.5vw; /* Could be more or less, depending on screen size */
+}
+
+.modal-content1 {
+    background-color: white;
+    height: 88vh;
+    border-radius: 35px;
+    margin-left: 13vw;
+    vertical-align: center;
+    border: 4px solid #0183D2;
+    width: 75vw; /* Could be more or less, depending on screen size */
+}
+
+.modal-content2 {
+    background-color: white;
+    height: 68.8vh;
+    border-radius: 15px;
+    margin-top: 12.2vh;
+    margin-left: 34.2vw;
+    vertical-align: center;
+    border: 4px solid #0183D2;
+    width: 31.5vw; /* Could be more or less, depending on screen size */
+}
+
+.modal-content0 {
+    background-color: white;
+    height: 23vh;
+    align-self: center;
+    border-radius: 35px;
+    margin-left: 50vw;
+    margin-top: 30vh;
+    border: 4px solid #0183D2;
+    width: 22.5vw; /* Could be more or less, depending on screen size */
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.clearfix0::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and delete button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .deletebtn {
+        width: 100%;
+    }
+}
+
+.profile1 {
+    margin-top: 0.3vh;
+    border-radius: 100%;
+    border: solid 2px #0183D2;
+    max-height: 16vh;
+    max-width: 10vw;
+    transition: 0.5s;
+    margin: left;
+    position: absolute;
+}
+
+.material-icons.edit-pr:hover{
+    cursor: pointer;
+}
+
+.material-icons.exit::before{
+    content: "cancel";
+    align-self: center;
+    color:#0183D2;
+    font-size: 3.5vw;
+    margin-top: -4vh;
+    margin-left: 46.5vw;
+    margin-bottom: 2vh;
+    position: absolute;
+}
+
+.material-icons-round.exit-me::before{
+    content: "clear";
+    color: white;
+    font-weight: 800;
+    background-color: #0183D2;
+    border-radius: 100%;
+    font-size: 3.5vw;
+    margin-left: 63.8vw;
+    margin-top: 10vh;
+    position: fixed;
+}
+
+.material-icons-round.exit-me:hover{
+    cursor: pointer;
+}
+
+.material-icons.edit-pr::before{
+    color: #0183D2;
+    font-size: 0.00001vw;
+}
+
+.out{
+    color: #FF7979;
+    background-color: transparent;
+    border: 1px solid #0183D2;
+    border-radius: 1.2vh;
+    margin-left: 34.8vw;
+    margin-top: -1vh;
+    position: absolute;
+}
+
+.slant1{
+    font-style: italic;
+    font-weight: 700;
+} 
+
+.slant2{
+    font-style: italic;
+}
+
+.edit {
+    margin-top: 2vh;
+    margin-left: 11vw;
+    font-size: 5vw;
+    border-radius: 100%;
+    padding: 0.5vw;
+    color: white;
+    background-color: #0183D2;
+    transition: 0.5s;
+}
+
+.after_edit {
+    margin-left: 6vw;
+    margin-top: 2vh;
+    align-content: bottom;
+    border: 0.32vw solid #0183D2;
+    border-radius: 2.5vw;
+    display: none;
+}
+
+.material-icons.save::before {
+    content: "save";
+    vertical-align: 0.67vh;
+    margin-left: 0.3vw;
+    font-size: 2vw;
+    margin-top: 0.5vh;
+    border-radius: 100%;
+    padding: 0.5vw;
+    color: white;
+    background-color: #0183D2;
+    transition: 0.5s;
+}
+
+.material-icons.cancel::before {
+    content: "cancel";
+    align-self: center;
+    color:#0183D2;
+    font-size: 3.5vw;
+    margin-top: 1vh;
+    margin-bottom: 0.5vh;
+    vertical-align: -0.65vh;
+    padding-top: 1vh;
+    padding-left: 0.2vw;
+    margin-left: 0.2vw; 
+    transition: 0.5s;
+}
+
+.edit:hover {
+    cursor: pointer;
+    padding: 0.6vw;
+}
+
+.to_edit {
+    display: none;
+    margin-left: 8.5vw;
+}
+
+.material-icons.md6 {
+    margin-left: 1vw;
+}
+
+.material-icons.md5 {
+    margin-left: 0.7vw;
+}
+
+.material-icons.md6:hover ,.material-icons.md5:hover, .cancel:hover, .save:hover{
+    cursor: pointer;
+}
+
+.panel-default{
+    padding-left: 0.8vw;
+    padding-top: 2.5vh;
+    width: 22vw;
+    background-color: #0183D2;
+/*     border-radius: 3vh; */
+    margin-left: 5%;
+    margin-top: 1vh;
+    align-content: left;
+    border: 1.5px solid transparent; 
+}
+
+.panel-default .panel-heading{
+    height: 8vh; 
+    width: 18.6vw;
+    margin-top: -2.5vh;
+    margin-left: 0%;
+    background-color: transparent;
+/*     border-radius: 3vh;   */
+}
+
+.select1{
+    border-left-color:white;
+    border-right-color:white;
+    border-width:3px;
+    border-top-width:0vh;
+    border-bottom-width:0px; 
+    background-color:rgba(255, 255, 255, 0.1);
+}
+
+.select2{
+    border: 1.5px solid transparent;
+}
+
+.panel-title{
+    height: 8vh;
+    padding-top: 1.4vh;
+    color: white;
+    cursor: pointer;
+}
+
+.sem_font{
+    margin-top: 14vh;
+    padding-top: 2vh;
+}
+
+.panel-default:hover .panel-title{
+    cursor: pointer;
+}
+
+.labCode:hover{
+    cursor: pointer;  
+}
+
+.profile-edit{
+    padding-top: 4.6vh;
+}
+
+.labCode{
+    position:center;
+    color: white;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    background-color: transparent;
+}
+
+.selected{
+    background-color: white;
+    color: #0183D2;
+}
+
+.selected:focus {
+    outline: none;
+}
+
+
+.panel-title{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.a{
+    background-color: #0183D2;
+    color:white; 
+}
+
+.panel-body{
+    padding:2px 8px 20px 87px;
+}
+
+th{
+  background-color: #0183D2;
+  color:white;
+  padding:15px;
+}
+
+
+.apk{
+    overflow-x: hidden;
+    margin-top: 5vw;
+    max-height: 30vw;
+    overflow-y: auto;
+}
+
+.apk::-webkit-scrollbar {
+    width:0.32vw;
+    overflow-y: auto;
+    overflow-x:hidden;
+    position: relative;
+}
+.apk::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+.apk::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: transparent; 
+}
+
+table.b{
+  table-layout:auto;
+  /* padding-top: 0.5vh; */
+  padding-bottom: 1vh;
+  margin-left: 1.5vw;
+  border: 2px solid transparent;
+  width: 68.5vw;
+  height: 38vh;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 6px;
+    text-align: center;
+    /* Apply cell spacing */
+}
+
+table,
+th,
+td {
+    border: 1px solid #FBFBFB;;
+}
+
+table th,
+table td {
+    padding: 5px;
+    /* Apply cell padding */
+}
+
+td{
+    background-color: #FBFBFB;
+    max-height: 1vw;
+    color:#0183D2;
+    border: 2px solid transparent;
+}
+
+.table-icon{
+    position: relative;
+    margin-bottom: -2.5vh;
+    margin-top: 1vh;
+    margin-left: 1vw;
+}
+
+tr:last-child td:last-child { border-bottom-right-radius: 32px; }
+
+tr:last-child td:first-child { border-bottom-left-radius: 32px; }
+
+input[type=email], input[type=password], input[type=text] {
+    width: 21vw;
+    border-color: #0183D2;
+    outline: none;
+    background: #ffffff;
+    border: 1px solid #0183D2;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: #0183D2;
+    font-family: poppins;
+    font-weight: 500;
+    margin-top: 3.4vh;
+    margin-left: -0.2vw;
+}
+
+.inputWithIcon input[type=password], input[type=text] {
+    padding-right: 2.5vw;
+}
+
+.inputWithIcon i {
+    margin-left: -1.8vw;
+    cursor: pointer;
+} 
+
+::placeholder {
+    color: #0183D2;
+    font-size: 0.8rem;
+}
+
+.inputWith2Icon input[type=password], input[type=text] {
+    padding-right: 4vw;
+}
+
+.inputWith2Icon .fa-eye {
+    margin-left: -4vw;
+    cursor: pointer;
+}
+
+.inputWith2Icon .fa-info-circle {
+    font-size: 1.3vw;
+    margin-left: 0.2vw;
+    cursor: pointer;
+}
+
+.inputWithIcon .fa-circle {
+    cursor: default;
+    font-size: 1.2vw;
+}
+
+.profile-edit {
+    font-weight: 720;
+    text-align: left;
+    margin-top: 5vh;
+    margin-left: 1vw;
+}
+
+.pwd {
+    margin-top: 4vh;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    box-shadow: whitesmoke;
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: #0183D2 !important;
+    caret-color: #0183D2;
+}
+
+.hollow {
+    position: absolute;
+    width: 8.7vw;
+    height: 6.4vh;
+    background-color: white;
+    border: 1px solid #0183D2;;
+    border-radius: 8px;
+    font-family: poppins;
+    font-weight: 600;
+    color: #0183D2;
+    font-size: 1em;
+    margin-top: 3.5vh;
+    margin-left: 2vw;
+}
+
+.hollow:hover {
+    background-color: #f1f1f1;
+}
+
+.hint_box {
+    padding-top: 1.8vw;
+    padding-left: 0.5vw;
+    top: 29.5vh;
+    margin-left: 3.5vw;
+    height: 30vh;
+    width: 22vw;
+    color: black;
+    text-align: left;
+    background-color: #EEEEEE;
+    position: absolute;
+    font-size: 0.9vw;
+    border-radius: 1.9vw;
+    font-weight: 600;
+    line-height: 3.4vh;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateY(-8vh);
+    z-index: 2;
+}
+
+.hint_header {
+    font-size: 1.2vw;
+    font-weight: bolder;
+    margin-bottom: 1.5vh;
+    margin-left: 1vw;
+}
+
+.info:hover ~ .hint_box {
+    visibility: visible !important;
+    opacity: 1;
+    transform: translateY(0vh);
+}
+
+.profilediv {
+    margin-top: 5.6vh;
+    margin-left: 45.5vw;
+    display:inline-block;
+    position: absolute;
+    z-index: 2;
+}
+
+.material-icons-round.plus::before{
+    content: "add";
+    color: white;
+    background-color: #0183D2;
+    border-radius: 100%;
+    font-size: 2vw;
+    margin-top: 4.2vh;
+    font-weight: 600;
+    margin-left: -15.1vw;
+    position: fixed;
+}
+
+.profile_upload {
+    border-radius: 100%;
+    max-width: 10vw;
+    max-height: 16vh;
+    border: 4px solid #0183D2;
+}
+
+.material-icons.upload_plus:hover {
+    cursor: pointer;
+}
+.sem_list{
+    height:78vh;
+    width:24vw;
+    margin-left: 2%;
+    overflow-x:hidden;
+}
+#semesters::-webkit-scrollbar {
+    width:0.32vw;
+    overflow-y: auto;
+    overflow-x:hidden;
+    position: relative;
+}
+#semesters::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+#semesters::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background:#74ABCC; 
+}
+
